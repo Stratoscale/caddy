@@ -3,9 +3,9 @@ package onevent
 import (
 	"strings"
 
+	"github.com/Stratoscale/caddy"
+	"github.com/Stratoscale/caddy/onevent/hook"
 	"github.com/google/uuid"
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/onevent/hook"
 )
 
 func init() {

@@ -6,12 +6,12 @@
 <p align="center">
 	<a href="https://travis-ci.org/mholt/caddy"><img src="https://img.shields.io/travis/mholt/caddy.svg?label=linux+build"></a>
 	<a href="https://ci.appveyor.com/project/mholt/caddy"><img src="https://img.shields.io/appveyor/ci/mholt/caddy.svg?label=windows+build"></a>
-	<a href="https://godoc.org/github.com/mholt/caddy"><img src="https://img.shields.io/badge/godoc-reference-blue.svg"></a>
-	<a href="https://goreportcard.com/report/mholt/caddy"><img src="https://goreportcard.com/badge/github.com/mholt/caddy"></a>
+	<a href="https://godoc.org/github.com/Stratoscale/caddy"><img src="https://img.shields.io/badge/godoc-reference-blue.svg"></a>
+	<a href="https://goreportcard.com/report/mholt/caddy"><img src="https://goreportcard.com/badge/github.com/Stratoscale/caddy"></a>
 	<br>
 	<a href="https://twitter.com/caddyserver" title="@caddyserver on Twitter"><img src="https://img.shields.io/badge/twitter-@caddyserver-55acee.svg" alt="@caddyserver on Twitter"></a>
 	<a href="https://caddy.community" title="Caddy Forum"><img src="https://img.shields.io/badge/community-forum-ff69b4.svg" alt="Caddy Forum"></a>
-	<a href="https://sourcegraph.com/github.com/mholt/caddy?badge" title="Caddy on Sourcegraph"><img src="https://sourcegraph.com/github.com/mholt/caddy/-/badge.svg" alt="Caddy on Sourcegraph"></a>
+	<a href="https://sourcegraph.com/github.com/Stratoscale/caddy?badge" title="Caddy on Sourcegraph"><img src="https://sourcegraph.com/github.com/Stratoscale/caddy/-/badge.svg" alt="Caddy on Sourcegraph"></a>
 </p>
 <p align="center">
 	<a href="https://caddyserver.com/download">Download</a> ·
@@ -23,7 +23,7 @@
 
 Caddy is a **production-ready** open-source web server that is fast, easy to use, and makes you more productive.
 
-Available for Windows, Mac, Linux, BSD, Solaris, and [Android](https://github.com/mholt/caddy/wiki/Running-Caddy-on-Android).
+Available for Windows, Mac, Linux, BSD, Solaris, and [Android](https://github.com/Stratoscale/caddy/wiki/Running-Caddy-on-Android).
 
 <p align="center">
 	<b>Thanks to our special sponsor:</b>
@@ -56,37 +56,33 @@ Available for Windows, Mac, Linux, BSD, Solaris, and [Android](https://github.co
 
 Altogether, Caddy can do things other web servers simply cannot do. Its features and plugins save you time and mistakes, and will cheer you up. Your Caddy instance takes care of the details for you!
 
-
 <p align="center">
 	<b>Powered by</b>
 	<br>
 	<a href="https://github.com/mholt/certmagic"><img src="https://user-images.githubusercontent.com/1128849/49704830-49d37200-fbd5-11e8-8385-767e0cd033c3.png" alt="CertMagic" width="250"></a>
 </p>
 
-
 ## Install
 
 Caddy binaries have no dependencies and are available for every platform. Get Caddy any of these ways:
 
 - **[Download page](https://caddyserver.com/download)** (RECOMMENDED) allows you to customize your build in the browser
-- **[Latest release](https://github.com/mholt/caddy/releases/latest)** for pre-built, vanilla binaries
+- **[Latest release](https://github.com/Stratoscale/caddy/releases/latest)** for pre-built, vanilla binaries
 - **[AWS Marketplace](https://aws.amazon.com/marketplace/pp/B07J1WNK75?qid=1539015041932&sr=0-1&ref_=srh_res_product_title&cl_spe=C)** makes it easy to deploy directly to your cloud environment. <a href="https://aws.amazon.com/marketplace/pp/B07J1WNK75?qid=1539015041932&sr=0-1&ref_=srh_res_product_title&cl_spe=C" target="_blank">
-<img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png" alt="Get Caddy on the AWS Marketplace" height="25"/></a>
-
+  <img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png" alt="Get Caddy on the AWS Marketplace" height="25"/></a>
 
 ## Build
 
 To build from source you need **[Git](https://git-scm.com/downloads)** and **[Go](https://golang.org/doc/install)** (1.10 or newer). Follow these instruction for fast building:
 
-- Get the source with `go get github.com/mholt/caddy/caddy` and then run `go get github.com/caddyserver/builds`
-- Now `cd $GOPATH/src/github.com/mholt/caddy/caddy` and run `go run build.go`
+- Get the source with `go get github.com/Stratoscale/caddy/caddy` and then run `go get github.com/caddyserver/builds`
+- Now `cd $GOPATH/src/github.com/Stratoscale/caddy/caddy` and run `go run build.go`
 
 Then make sure the `caddy` binary is in your PATH.
 
 To build for other platforms, use build.go with the `--goos` and `--goarch` flags.
 
 When building from source, telemetry is enabled by default. You can disable it by changing `enableTelemetry` in run.go before compiling, or use the `-disabled-metrics` flag at runtime to disable only certain metrics.
-
 
 ## Quick Start
 
@@ -126,7 +122,7 @@ header /api Access-Control-Allow-Origin *
 
 When you run `caddy` in that directory, it will automatically find and use that Caddyfile.
 
-This simple file enables server push (via Link headers), allows directory browsing (for folders without an index file), hosts a WebSocket echo server at /echo, serves clean URLs, logs requests to an access log, proxies all API requests to a backend on port 7005, and adds the coveted  `Access-Control-Allow-Origin: *` header for all responses from the API.
+This simple file enables server push (via Link headers), allows directory browsing (for folders without an index file), hosts a WebSocket echo server at /echo, serves clean URLs, logs requests to an access log, proxies all API requests to a backend on port 7005, and adds the coveted `Access-Control-Allow-Origin: *` header for all responses from the API.
 
 Wow! Caddy can do a lot with just a few lines.
 
@@ -138,32 +134,29 @@ Sites with qualifying hostnames are served over [HTTPS by default](https://caddy
 
 Caddy has a nice little command line interface. Run `caddy -h` to view basic help or see the [CLI documentation](https://caddyserver.com/docs/cli) for details.
 
-
 ## Running in Production
 
 Caddy is production-ready if you find it to be a good fit for your site and workflow.
 
 **Running as root:** We advise against this. You can still listen on ports < 1024 on Linux using setcap like so: `sudo setcap cap_net_bind_service=+ep ./caddy`
 
-The Caddy project does not officially maintain any system-specific integrations nor suggest how to administer your own system. But your download file includes [unofficial resources](https://github.com/mholt/caddy/tree/master/dist/init) contributed by the community that you may find helpful for running Caddy in production.
+The Caddy project does not officially maintain any system-specific integrations nor suggest how to administer your own system. But your download file includes [unofficial resources](https://github.com/Stratoscale/caddy/tree/master/dist/init) contributed by the community that you may find helpful for running Caddy in production.
 
 How you choose to run Caddy is up to you. Many users are satisfied with `nohup caddy &`. Others use `screen`. Users who need Caddy to come back up after reboots either do so in the script that caused the reboot, add a command to an init script, or configure a service with their OS.
 
 If you have questions or concerns about Caddy' underlying crypto implementations, consult Go's [crypto packages](https://golang.org/pkg/crypto), starting with their documentation, then issues, then the code itself; as Caddy uses mainly those libraries.
 
-
 ## Contributing
 
-**[Join our forum](https://caddy.community) where you can chat with other Caddy users and developers!** To get familiar with the code base, try [Caddy code search on Sourcegraph](https://sourcegraph.com/github.com/mholt/caddy/)!
+**[Join our forum](https://caddy.community) where you can chat with other Caddy users and developers!** To get familiar with the code base, try [Caddy code search on Sourcegraph](https://sourcegraph.com/github.com/Stratoscale/caddy/)!
 
-Please see our [contributing guidelines](https://github.com/mholt/caddy/blob/master/.github/CONTRIBUTING.md) for instructions. If you want to write a plugin, check out the [developer wiki](https://github.com/mholt/caddy/wiki).
+Please see our [contributing guidelines](https://github.com/Stratoscale/caddy/blob/master/.github/CONTRIBUTING.md) for instructions. If you want to write a plugin, check out the [developer wiki](https://github.com/Stratoscale/caddy/wiki).
 
 We use GitHub issues and pull requests only for discussing bug reports and the development of specific changes. We welcome all other topics on the [forum](https://caddy.community)!
 
-If you want to contribute to the documentation, please [submit an issue](https://github.com/mholt/caddy/issues/new) describing the change that should be made.
+If you want to contribute to the documentation, please [submit an issue](https://github.com/Stratoscale/caddy/issues/new) describing the change that should be made.
 
 Thanks for making Caddy -- and the Web -- better!
-
 
 ## Donors
 
@@ -173,7 +166,6 @@ Thanks for making Caddy -- and the Web -- better!
 
 We thank them for their services. **If you want to help keep Caddy free, please [become a sponsor](https://caddyserver.com/pricing)!**
 
-
 ## About the Project
 
 Caddy was born out of the need for a "batteries-included" web server that runs anywhere and doesn't have to take its configuration with it. Caddy took inspiration from [spark](https://github.com/rif/spark), [nginx](https://github.com/nginx/nginx), lighttpd,
@@ -181,4 +173,4 @@ Caddy was born out of the need for a "batteries-included" web server that runs a
 
 **The name "Caddy" is trademarked:** The name of the software is "Caddy", not "Caddy Server" or "CaddyServer". Please call it "Caddy" or, if you wish to clarify, "the Caddy web server". See [brand guidelines](https://caddyserver.com/brand). Caddy is a registered trademark of Light Code Labs, LLC.
 
-*Author on Twitter: [@mholt6](https://twitter.com/mholt6)*
+_Author on Twitter: [@mholt6](https://twitter.com/mholt6)_

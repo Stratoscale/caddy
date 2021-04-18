@@ -32,8 +32,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/caddytls"
+	"github.com/Stratoscale/caddy"
+	"github.com/Stratoscale/caddy/caddytls"
 )
 
 // requestReplacer is a strings.Replacer which is used to

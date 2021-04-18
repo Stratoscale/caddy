@@ -32,11 +32,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/Stratoscale/caddy"
+	"github.com/Stratoscale/caddy/caddyhttp/staticfiles"
+	"github.com/Stratoscale/caddy/caddytls"
+	"github.com/Stratoscale/caddy/telemetry"
 	"github.com/lucas-clemente/quic-go/h2quic"
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/caddyhttp/staticfiles"
-	"github.com/mholt/caddy/caddytls"
-	"github.com/mholt/caddy/telemetry"
 )
 
 // Server is the HTTP server implementation.

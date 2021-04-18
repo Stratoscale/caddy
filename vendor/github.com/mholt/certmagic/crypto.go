@@ -160,7 +160,7 @@ func hashCertificateChain(certChain [][]byte) string {
 // cipher suite to use depending on hardware support
 // for AES-NI.
 //
-// See https://github.com/mholt/caddy/issues/1674
+// See https://github.com/Stratoscale/caddy/issues/1674
 func preferredDefaultCipherSuites() []uint16 {
 	if cpuid.CPU.AesNi() {
 		return defaultCiphersPreferAES

@@ -26,7 +26,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/Stratoscale/caddy/caddyhttp/httpserver"
 )
 
 func TestErrors(t *testing.T) {

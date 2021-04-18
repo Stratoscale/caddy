@@ -18,8 +18,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/Stratoscale/caddy"
+	"github.com/Stratoscale/caddy/caddyhttp/httpserver"
 )
 
 func init() {

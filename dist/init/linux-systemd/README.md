@@ -13,8 +13,8 @@ The easiest way to check your systemd version is to run `systemctl --version`.
 
 We will assume the following:
 
-* that you want to run caddy as user `www-data` and group `www-data`, with UID and GID 33
-* you are working from a non-root user account that can use 'sudo' to execute commands as root
+- that you want to run caddy as user `www-data` and group `www-data`, with UID and GID 33
+- you are working from a non-root user account that can use 'sudo' to execute commands as root
 
 Adjust as necessary or according to your preferences.
 
@@ -91,7 +91,7 @@ Install the systemd service unit configuration file, reload the systemd daemon,
 and start caddy:
 
 ```bash
-wget https://raw.githubusercontent.com/mholt/caddy/master/dist/init/linux-systemd/caddy.service
+wget https://raw.githubusercontent.com/Stratoscale/caddy/master/dist/init/linux-systemd/caddy.service
 sudo cp caddy.service /etc/systemd/system/
 sudo chown root:root /etc/systemd/system/caddy.service
 sudo chmod 644 /etc/systemd/system/caddy.service
@@ -113,7 +113,7 @@ journalctl --boot -u caddy.service
 
 Use `log stdout` and `errors stderr` in your Caddyfile to fully utilize systemd journaling.
 
-If your GNU/Linux distribution does not use *journald* with *systemd* then check any logfiles in `/var/log`.
+If your GNU/Linux distribution does not use _journald_ with _systemd_ then check any logfiles in `/var/log`.
 
 If you want to follow the latest logs from caddy you can do so like this:
 

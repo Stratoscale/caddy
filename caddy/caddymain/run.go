@@ -28,16 +28,16 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/Stratoscale/caddy"
+	"github.com/Stratoscale/caddy/caddyfile"
+	"github.com/Stratoscale/caddy/caddytls"
+	"github.com/Stratoscale/caddy/telemetry"
 	"github.com/google/uuid"
 	"github.com/klauspost/cpuid"
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/caddyfile"
-	"github.com/mholt/caddy/caddytls"
-	"github.com/mholt/caddy/telemetry"
 	"github.com/mholt/certmagic"
 	lumberjack "gopkg.in/natefinch/lumberjack.v2"
 
-	_ "github.com/mholt/caddy/caddyhttp" // plug in the HTTP server type
+	_ "github.com/Stratoscale/caddy/caddyhttp" // plug in the HTTP server type
 	// This is where other plugins get plugged in (imported)
 )
 
